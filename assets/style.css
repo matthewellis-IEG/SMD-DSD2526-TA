@@ -32,7 +32,7 @@ html, body {
 
 /* Header Styles */
 .header {
-    background-color: #0400ff;
+    background-color: #00044a;
     grid-area: header;
     display: flex;
     align-items: center;
@@ -71,7 +71,7 @@ html, body {
 
 /* Navigation Styles */
 .navigation {
-    background-color: #0400ff;
+    background-color: #00044a;
     grid-area: nav;
     border-right: 2px solid #333;
     padding: 10px;
@@ -113,7 +113,7 @@ html, body {
 
 /* Footer Styles */
 .footer {
-    background-color: #0400ff;
+    background-color: #00044a;
     grid-area: footer;
     border-top: 2px solid #333;
     padding: 10px;
