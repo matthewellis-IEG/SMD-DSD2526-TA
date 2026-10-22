@@ -82,6 +82,7 @@ html, body {
 }
 
 .navigation h2 {
+    color: white;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     font-size: 24px;
