@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Advice Home Page</title>
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -18,10 +17,10 @@
             </div>
             <div class="header-icons">
                 <div class="icon" aria-label="Account">
-                    <i class="glyphicon glyphicon-user"></i>
+
                 </div>
                 <div class="icon" aria-label="Settings">
-                    <i class="glyphicon glyphicon-cog"></i>
+                    
                 </div>
             </div>
         </header>
