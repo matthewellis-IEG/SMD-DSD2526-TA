@@ -1,3 +1,4 @@
+/* Reset and Base Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,21 +6,26 @@
     font-family: Arial, sans-serif;
 }
 
-body {
+/* Force body to fill screen exactly and lock scrollbars */
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; 
     background-color: #f9f9f9;
-    padding: 20px;
 }
 
-/* Main Grid Layout Layout */
+/* Master Layout Container */
 .container {
     display: grid;
     grid-template-columns: 150px 1fr;
-    grid-template-rows: auto 1fr auto;
+    /* Header and Footer take their minimal required space; main fills the remaining room */
+    grid-template-rows: auto 1fr auto; 
     grid-template-areas: 
         "header header"
         "nav main"
         "footer footer";
-    min-height: 90vh;
+    height: 100vh;
+    width: 100vw;
     border: 2px solid #333;
     background-color: #fff;
 }
@@ -30,12 +36,13 @@ body {
     display: flex;
     align-items: center;
     border-bottom: 2px solid #333;
+    height: 70px; /* Locked height to prevent vertical expansion */
 }
 
 .logo {
     width: 150px;
     height: 100%;
-    padding: 20px;
+    padding: 10px;
     font-weight: bold;
     text-align: center;
     border-right: 2px solid #333;
@@ -46,7 +53,7 @@ body {
 
 .title-header {
     flex-grow: 1;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -65,7 +72,7 @@ body {
 .navigation {
     grid-area: nav;
     border-right: 2px solid #333;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,25 +85,27 @@ body {
     letter-spacing: 2px;
 }
 
-/* Main Content and Cards Layout */
+/* Main Content Area - Fluidly resizes to dynamic screen sizes */
 .main-content {
     grid-area: main;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 30px;
+    padding: 20px;
     background-color: #fff;
+    overflow: hidden; /* Stops internal card behaviors from causing page scroll */
 }
 
+/* Cards scale dynamically within the available main dimensions */
 .card {
     border: 2px solid #333;
     border-radius: 4px;
-    padding: 20px;
+    padding: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    min-height: 300px;
+    height: 100%; /* Spans full height of the main grid row */
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
@@ -104,7 +113,8 @@ body {
 .footer {
     grid-area: footer;
     border-top: 2px solid #333;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     font-size: 14px;
+    height: 40px; /* Locked height to keep page height precise */
 }
