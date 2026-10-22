@@ -17,10 +17,10 @@
             </div>
             <div class="header-icons">
                 <div class="icon" aria-label="Account">
-                    <img src="images/account.png" alt="account">
+                    <img src="images/account.jpg" alt="account">
                 </div>
                 <div class="icon" aria-label="Settings">
-                    
+                    <img src="images/settings.jpg" alt="settings">
                 </div>
             </div>
         </header>
