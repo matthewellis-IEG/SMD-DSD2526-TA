@@ -17,7 +17,7 @@
             </div>
             <div class="header-icons">
                 <div class="icon" aria-label="Account">
-
+                    <img src="images/account.png" alt="account">
                 </div>
                 <div class="icon" aria-label="Settings">
                     
