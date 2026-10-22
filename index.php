@@ -18,10 +18,10 @@
             </div>
             <div class="header-icons">
                 <div class="icon" aria-label="Account">
-                    <i class="glyphicon glyphicon-user"></i>
+                    <span class="glyphicon glyphicon-user"></span>
                 </div>
                 <div class="icon" aria-label="Settings">
-                    <i class="glyphicon glyphicon-cog"></i>
+                    <span class="glyphicon glyphicon-cog"></span>
                 </div>
             </div>
         </header>
