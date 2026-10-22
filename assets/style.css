@@ -75,7 +75,7 @@ img{
 }
 
 /* Navigation Styles */
-nav {
+.navigation {
     background-color: #00044a;
     grid-area: nav;
     border-right: 2px solid #333;
