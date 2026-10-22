@@ -22,7 +22,7 @@
         </header>
 
         <!-- SIDEBAR NAVIGATION -->
-        <nav class="navigation">
+        <nav>
             <h2>Navigation</h2>
         </nav>
 
