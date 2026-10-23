@@ -16,9 +16,11 @@
                 <h1>Title Header</h1>
             </div>
             <div class="header-icons">
-                <div class="icon" aria-label="Account">
-                    <img src="images/account.png" alt="account">
-                </div>
+                <a href="login.php">
+                    <div class="icon" aria-label="Account">
+                        <img src="images/account.png" alt="account">
+                    </div>
+                </a>
                 <div class="icon" aria-label="Settings">
                     <img src="images/settings.png" alt="settings">
                 </div>
