@@ -14,16 +14,15 @@ html, body {
     background-color: #f9f9f9;
 }
 
-img{
-    height: 70px;
+img {
+    height: 80px;
 }
 
 /* Master Layout Container */
 .container {
     display: grid;
     grid-template-columns: 150px 1fr;
-    /* Header and Footer take their minimal required space; main fills the remaining room */
-    grid-template-rows: auto 1fr auto; 
+    grid-template-rows: 70px 1fr 40px; 
     grid-template-areas: 
         "header header"
         "nav main"
@@ -42,7 +41,7 @@ img{
     display: flex;
     align-items: center;
     border-bottom: 2px solid #333;
-    height: 70px; /* Locked height to prevent vertical expansion */
+    height: 70px; 
 }
 
 .logo {
@@ -63,15 +62,22 @@ img{
     text-align: center;
 }
 
+.title-header h2 {
+    color: white;
+    font-size: 24px;
+}
+
 .header-icons {
     display: flex;
     gap: 20px;
     padding-right: 20px;
+    align-items: center;
 }
 
 .icon {
     font-size: 28px;
     cursor: pointer;
+    color: white;
 }
 
 /* Navigation Styles */
@@ -93,31 +99,55 @@ img{
     letter-spacing: 2px;
 }
 
-/* Main Content Area - Fluidly resizes to dynamic screen sizes */
+/* ==========================================================================
+   FIXED GRID MAIN PANEL CENTERING
+   ========================================================================== */
 .main-content {
     grid-area: main;
-    display: flex;                  
-    justify-content: center;        /* Centers elements horizontally */
-    align-items: center;            /* Centers elements vertically */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     padding: 20px;
     background-color: #fff;
-    overflow: hidden; 
+    overflow: hidden; /* Stops internal card behaviors from causing page scroll */
 }
 
-/* Outer Framed Box (Creates the largest surrounding wireframe container) */
+/* Cards scale dynamically within the available main dimensions */
+.summary-boxes {
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%; /* Spans full height of the main grid row */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.login-box-position {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Outer Box Framed Container */
 .login-outer-box {
-    border: 2px solid #333;
-    padding: 30px;
+    border: 3px solid #333333;                 /* Dark layout wireframe border */
+    padding: 24px;
     width: 100%;
-    max-width: 500px;              
-    background-color: #fff;
+    max-width: 500px;                          
+    min-height: 350px;                         /* Keeps the box visible while empty */
+    background-color: #00044a;
 }
 
-/* Middle Box Container (Creates the secondary interior framed layer) */
+/* Inner Box Framed Container */
 .login-middle-box {
-    border: 2px solid #333;
-    padding: 25px 20px;
-    background-color: #fff;
+    border: 3px solid #333333;                 /* Secondary interior border frame */
+    padding: 24px;
+    height: 100%;                              
+    min-height: 298px;                         /* Keeps the box visible while empty */
+    background-color: #ffffff;
 }
 
 /* Form container element mapping stacking layout */
@@ -136,7 +166,7 @@ img{
     background-color: #fff;
 }
 
-.input-group span {
+.input-group .glyphicon {
     margin-right: 15px;
     font-size: 18px;
     color: #333;
@@ -156,10 +186,10 @@ img{
     color: #000;
     font-weight: bold;
     font-size: 16px;
-    padding: 8px;
+    padding: 6px;
     cursor: pointer;
     text-align: center;
-    width: 40%;                  
+    width: 35%;                  
     align-self: center;
 }
 
@@ -187,10 +217,11 @@ img{
 }
 
 .signup-prompt a {
-    color: #000;
-    font-weight: bold;
+    color: blue;
     text-decoration: underline;
 }
+
+/* ========================================================================== */
 
 /* Footer Styles */
 .footer {
@@ -201,5 +232,5 @@ img{
     padding: 10px;
     text-align: center;
     font-size: 14px;
-    height: 40px; /* Locked height to keep page height precise */
+    height: 40px; 
 }
