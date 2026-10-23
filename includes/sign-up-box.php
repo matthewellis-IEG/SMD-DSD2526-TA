@@ -16,6 +16,12 @@
                     <span class="glyphicon glyphicon-user"></span>
                     <input type="text" placeholder="Choose a username" required>
                 </div>
+
+                <!-- Address Field -->
+                <div class="input-group">
+                    <span class="glyphicon glyphicon-home"></span>
+                    <input type="text" placeholder="Enter your address" required>
+                </div>
                 
                 <!-- Password Field -->
                 <div class="input-group">
