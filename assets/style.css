@@ -190,6 +190,8 @@ img {
     cursor: pointer;
     text-align: center;
     width: 35%;                  
+    display: flex;
+    justify-content: center;
     align-self: center;
 }
 
@@ -208,6 +210,13 @@ img {
     text-decoration: underline;
 }
 
+/* Sign-Up specific layouts that piggyback off the existing styles */
+.signup-form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Slightly tighter gap to neatly fit 4 inputs instead of 2 */
+}
+
 /* Sign Up Footer Prompt */
 .signup-prompt {
     text-align: center;
@@ -221,6 +230,22 @@ img {
     text-decoration: underline;
 }
 
+.signup-btn {
+    border: 3px solid #333333;
+    background-color: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 6px 12px;
+    cursor: pointer;
+    align-self: center;
+    width: 120px; /* Slightly wider button to fit "Sign Up" text */
+    margin-top: 5px;
+}
+
+.signup-btn:hover {
+    background-color: #f0f0f0;
+}
 /* ========================================================================== */
 
 /* Footer Styles */
